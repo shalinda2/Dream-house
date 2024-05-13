@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dream house</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+      @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --font1: "Roboto";
+        --font2: "Oswald";
+      }
+      /* main header start */
+      .wrapper {
+        width: 1200px;
+        margin: 0 auto;
+        padding: 3px;
+      }
+      body {
+        background: #dddbd9;
+      }
+
+      #logo {
+        width: 280px;
+      }
+
+      #header1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+      }
+
+      #mainmenu > a {
+        text-decoration: none;
+        color: #222;
+        font-size: 18px;
+        text-transform: uppercase;
+        padding: 10px;
+        font-family: var(--font1);
+      }
+
+      #mainmenu > span {
+        padding: 0 10px;
+        font-family: var(--font1);
+      }
+      #mainmenu > a:hover,
+      .active {
+        border-bottom: 3px solid orange;
+      }
+      #menuIcon {
+        margin-top: -10px;
+      }
+
+      /* main header end */
+      /* main section  start */
+      #mainSection {
+        display: flex;
+        justify-content: space-between;
+      }
+      #mainLeft {
+        width: 52%;
+      }
+      #mainRight {
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      #welcome {
+        padding: 60px;
+      }
+      h1 {
+        font-family: var(--font2);
+        font-size: 50px;
+      }
+      p {
+        font-family: var(--font1);
+        line-height: 1.5;
+        margin: 10px 0;
+      }
+      #imageSet1 {
+        display: flex;
+      }
+      /* cards */
+      #cards {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        margin-bottom: 30px;
+      }
+      .card {
+        background: white;
+        padding: 30px 20px 20px;
+        width: 27%;
+        text-align: center;
+      }
+      h2 {
+        font-family: var(--font2);
+        font-size: 33px;
+        padding: 20px 0;
+        letter-spacing: 0.5px;
+        color: #222;
+      }
+      .card > p {
+        color: gray;
+        font-style: italic;
+      }
+      .card > h2 {
+        text-transform: uppercase;
+      }
+
+      /* main section end */
+      /* four cards */
+      #fourCards {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+      }
+      #fourCards > div {
+        width: 50%;
+        height: 280px;
+        padding: 50px 20px;
+        box-sizing: border-box;
+      }
+      #image1 {
+        background-image: url("images/chair-with-pillow.webp");
+        background-repeat: no-repeat;
+        background-position-y: -75px;
+        background-size: cover;
+      }
+      #image2 {
+        background-image: url("images/room.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #ideas {
+        background: white;
+      }
+      #plans {
+        background: #332e29;
+      }
+      #plans > p,
+      #plans > h2 {
+        color: white;
+      }
+      /* four cards end */
+      /* New ideas start */
+      #newIdeas {
+        background: white;
+        padding: 80px 0px;
+      }
+      .center {
+        text-align: center;
+      }
+      #para1 {
+        padding: 0px 200px;
+      }
+      /* new ideas end */
+      /* interior Start */
+      #interior {
+        padding-top: 80px;
+        padding-bottom: 40px;
+      }
+
+      #container {
+        display: flex;
+        margin-top: 3px7;
+      }
+      .whitebg {
+        background: white;
+        padding: 30px 20px;
+      }
+      .smallCards {
+        width: 50%;
+        box-sizing: border-box;
+      }
+      #containerRight {
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+      }
+      #containerLeft {
+        width: 50%;
+        background-image: url("images/traditional-house.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      /* interior end */
+      /* apartment start */
+      #apartment {
+        background-color: white;
+        padding-top: 80px;
+        padding-bottom: 40px;
+      }
+      #para2 {
+        padding-left: 200px;
+        padding-right: 200px;
+      }
+      #imgSet2 {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+      }
+      /* apartment end */
+      /* awsome interiors */
+      #awsome {
+        background: #ccc0b0;
+        padding: 40px 0;
+      }
+      #container2 {
+        display: flex;
+        justify-content: space-between;
+      }
+      #container2 > div {
+        background: white;
+        padding: 30px;
+        width: 550px;
+        box-sizing: border-box;
+      }
+      .numbers {
+        display: block;
+      }
+      .title {
+        font-size: 25px;
+        letter-spacing: 0px;
+      }
+      /* contact */
+      #contact {
+        padding: 40px 0;
+        background: #332e29;
+      }
+      #contactForm {
+        width: 550px;
+        padding: 70px 30px 30px;
+        border: 2px solid gray;
+        box-sizing: border-box;
+      }
+      #contactForm > h1,
+      #contactForm > p {
+        color: white;
+      }
+      #contactForm > span {
+        color: #52cc52;
+        font-family: var(--font1);
+      }
+      .formItem {
+        border: 2px solid #666;
+        padding: 10px;
+        background: transparent;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 20px 0;
+        color: white;
+        font-family: var(--font1);
+        font-size: 18px;
+      }
+      #contactForm > button {
+        padding: 20px;
+        border: 2px solid #666;
+        text-transform: uppercase;
+        background: transparent;
+        color: white;
+        font-family: var(--font1);
+        font-size: 18px;
+      }
+      #container3 {
+        display: flex;
+        justify-content: space-between;
+      }
+      #map {
+        width: 550px;
+        height: auto;
+        border: none;
+        background: #424242;
+      }
+      /* footer  */
+      footer {
+        background: #332e29;
+      }
+      #footerMenu {
+        display: flex;
+        justify-content: space-between;
+      }
+      .footerLinks {
+        font-family: var(--font1);
+        color: white;
+        list-style: none;
+      }
+      .link {
+        color: #ccc;
+      }
+      .footerLinks > li {
+        padding: 10px 0;
+      }
+      .footerHeadding {
+        font-family: var(--font1);
+        color: #ccc;
+        font-size: 20px;
+        font-weight: bold;
+
+        display: block;
+        margin-bottom: 20px;
+      }
+      #copyright {
+        background: #333;
+        padding: 15px 0;
+        /* margin-top: 18px; */
+      }
+      #para3 {
+        text-align: center;
+        color: #ccc;
+      }
+      /* medea quary start */
+      @media screen and (max-width: 1240px) {
+        .wrapper {
+          width: 96%;
+          padding-left: 2%;
+          padding-right: 2%;
+        }
+        #imageSet1 > img {
+          width: 33.33%;
+        }
+        /* #fourCards */
+        #fourCards > div {
+          height: auto;
+        }
+        #image1 {
+          background-position-y: 0;
+        }
+        #para1 {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        #imgSet2 > img {
+          width: 48%;
+        }
+        #para2 {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        #container2 > div {
+          width: 48%;
+        }
+        #contactForm,
+        #map {
+          width: 48%;
+        }
+      }
+      @media screen and (max-width: 1080px) {
+        #welcome > h1 {
+          font-size: 35px;
+        }
+        #imageSet1 > img {
+          width: 100%;
+          margin: 10px;
+        }
+        #mainRight {
+          display: block;
+        }
+        #welcome {
+          padding: 30px 20px 20px 30px;
+        }
+        h1 {
+          font-size: 45px;
+        }
+        .whitebg {
+          width: 100%;
+        }
+      }
+      @media screen and (max-width: 850px) {
+        #mainSection {
+          flex-direction: column;
+        }
+        #mainLeft,
+        #mainRight {
+          width: 100%;
+        }
+      }
+      @media screen and (max-width: 780px) {
+        #mainmenu {
+          display: none;
+        }
+        #cards {
+          flex-direction: column;
+        }
+        .card {
+          width: 100%;
+          box-sizing: border-box;
+          margin: 10px 0;
+        }
+      }
+      @media screen and (max-width: 650px) {
+        /* fourcards */
+        #fourCards {
+          flex-direction: column;
+        }
+        #fourCards > div {
+          width: 100%;
+        }
+        #image1,
+        #image2 {
+          height: 250px !important;
+        }
+        #image1 {
+          background-position-y: center;
+        }
+        #container {
+          flex-direction: column;
+        }
+        #container > div {
+          width: 100%;
+        }
+        #containerLeft {
+          width: 250px;
+        }
+        #container3 {
+          flex-direction: column;
+        }
+        #contactForm,
+        #map {
+          width: 100%;
+        }
+        #map {
+          height: 250px;
+          margin-top: 20px;
+        }
+      }
+      @media screen and (max-width: 550px) {
+        #container2 {
+          flex-direction: column;
+        }
+        #container2 > div {
+          width: 100%;
+          margin: 10px 0;
+          /* align-items: center; */
+        }
+        /* footer */
+        #footerMenu {
+          flex-direction: column;
+        }
+        .footerHeadding {
+          text-align: center;
+          margin-top: 20px;
+        }
+        .footerLinks {
+          text-align: center;
+        }
+      }
+      /* four cards */
+
+      @media screen and (max-width: 400px) {
+        #logo {
+          width: 240px;
+        }
+        #imageSet1 > img {
+          width: 25%;
+        }
+      }
+      @media screen and (max-width: 320px) {
+        .wrapper {
+          width: 320px;
+        }
+      }
+      /* meadia quary end */
+    </style>
+  </head>
+  <body>
+    <!-- main header start -->
+    <header class="wrapper" id="header1">
+      <img src="images/dreamhouse-logo.svg" alt="logo" id="logo" />
+
+      <nav id="mainmenu">
+        <a href="#" class="active"
+          ><img src="images/home-icon.svg" alt="home" /></a
+        ><span>|</span> <a href="#">Designs</a><span>|</span>
+        <a href="#">About US</a><span>|</span>
+        <a href="#">Contact US</a>
+      </nav>
+
+      <img src="images/menu.svg" alt="Menu" id="menuIcon" />
+    </header>
+    <!-- main header end -->
+    <!-- main secction start -->
+    <section class="wrapper" id="mainSection">
+      <img
+        id="mainLeft"
+        src="images/living-room.webp"
+        alt="Living living Room"
+      />
+      <div id="mainRight">
+        <div id="welcome">
+          <h1>Thai Style Home Wabi Sabi</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum
+            aliquam consequatur error ducimus maxime. Quibusdam voluptas
+            doloribus perspiciatis consequatur tenetur sunt provident nobis hic
+            autem! Sit maxime earum consequuntur voluptatibus, commodi nihil,
+            delectus tenetur at adipisci voluptates error debitis. Reiciendis
+            pariatur odio itaque ex, dolores eum. Itaque, cumque. Dolore, totam?
+          </p>
+        </div>
+        <figure id="imageSet1">
+          <img src="images/pillows.webp" alt="pillow" />
+          <img src="images/sea.webp" alt="sea" />
+          <img src="images/chair.webp" alt="chair" />
+        </figure>
+      </div>
+    </section>
+    <!-- main section end -->
+    <!-- section 2 start -->
+    <section class="wrapper" id="cards">
+      <div class="card">
+        <img src="images/rocket.svg" alt="rocket" />
+        <h2>Project</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci,
+          totam deleniti nesciunt numquam necessitatibus modi consectetur, velit
+          consequuntur quidem voluptatem optio voluptatum sit dolorum nihil?
+        </p>
+      </div>
+      <div class="card">
+        <img src="images/medal.svg" alt="medal" />
+        <h2>Awards</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci,
+          totam deleniti nesciunt numquam necessitatibus modi consectetur, velit
+          consequuntur quidem voluptatem optio voluptatum sit dolorum nihil?
+        </p>
+      </div>
+      <div class="card">
+        <img src="images/network.svg" alt="network" />
+        <h2>Team</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci,
+          totam deleniti nesciunt numquam necessitatibus modi consectetur, velit
+          consequuntur quidem voluptatem optio voluptatum sit dolorum nihil?
+        </p>
+      </div>
+    </section>
+    <!-- section 2 end -->
+    <!-- 4 cards start -->
+    <section class="wrapper" id="fourCards">
+      <div id="image1"></div>
+      <div id="ideas">
+        <h2>Design ideas</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis
+          distinctio explicabo obcaecati perspiciatis, deleniti possimus
+          deserunt optio ducimus corporis atque. Laudantium ex illum dolorem
+          deserunt reprehenderit provident rerum! Minus, voluptatibus?
+        </p>
+      </div>
+      <div id="plans">
+        <h2>House plans</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi
+          perspiciatis consectetur error, veniam dolorum magni sunt ducimus
+          debitis molestias a quibusdam obcaecati, deleniti eos voluptatum odit
+          numquam eius harum cumque.
+        </p>
+      </div>
+      <div id="image2"></div>
+    </section>
+    <!-- 4 cards end -->
+    <!-- new ideas start -->
+    <section id="newIdeas">
+      <div class="wrapper">
+        <h2 class="center">New Ideas to life</h2>
+        <p class="center" id="para1">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos impedit
+          rem, adipisci laboriosam et praesentium non, at sapiente sit deleniti
+          consectetur quod deserunt reiciendis labore provident rerum voluptas
+          incidunt? Assumenda, quo? Officia ut harum mollitia ullam numquam, nam
+          nulla expedita!
+        </p>
+      </div>
+    </section>
+    <!-- new ideas end -->
+    <!-- Interior design ideas -->
+    <section class="wrapper" id="interior">
+      <h1 class="center">50+ interior Design Ideas</h1>
+      <div id="container">
+        <div id="containerLeft"></div>
+        <div id="containerRight">
+          <div class="whitebg smallCards">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere
+              officia exercitationem animi sunt assumenda porro minus excepturi
+              non eligendi error.
+            </p>
+          </div>
+          <img src="images/statues.webp" class="smallCards" alt="statues" />
+          <img src="images/wood-bed.webp" class="smallCards" alt="wood-bed" />
+          <div class="whitebg smallCards">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque
+              aspernatur a enim culpa inventore ipsa officiis adipisci vitae
+              eius dolorem?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Home & aprtment stat -->
+    <section id="apartment">
+      <div class="wrapper">
+        <h1 class="center">Home & Apartment</h1>
+        <p class="center" id="para2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At beatae
+          adipisci perferendis mollitia eaque labore quaerat iure, vero a modi
+          illo? Voluptates eius sit harum.
+        </p>
+        <figure id="imgSet2">
+          <img src="images/living-area.webp" alt="living-area" />
+          <img src="images/angle-chair.webp" alt="angle-chair" />
+        </figure>
+      </div>
+    </section>
+    <!-- Home and apratment end -->
+    <!-- Awsome interiors -->
+    <section id="awsome">
+      <div class="wrapper" id="container2">
+        <div>
+          <h2 class="title"><sapn class="numbers">01</sapn>Awsome interior</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            in laborum neque fugiat exercitationem repellat provident numquam
+            doloremque officiis vel.
+          </p>
+        </div>
+        <div>
+          <h2 class="title"><span class="numbers">02</span>Fresh & creative</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            in laborum neque fugiat exercitationem repellat provident numquam
+            doloremque officiis vel.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Contact -->
+    <section id="contact">
+      <div class="wrapper" id="container3">
+        <form action="" id="contactForm">
+          <h1>Contact us</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique,
+            ea?
+          </p>
+          <span>contact@abc.com</span>
+          <input class="formItem" type="text" placeholder="Name" />
+          <input class="formItem" type="email" placeholder="E-mail" />
+          <textarea class="formItem" placeholder="Massage"></textarea>
+          <button type="submit">Submit</button>
+        </form>
+        <iframe
+          id="map"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3959.35855050164!2d80.0303729!3d7.0843672!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2fb6a031eb25f%3A0x5d31d65e1bffe988!2sRevoise!5e0!3m2!1sen!2slk!4v1696586364938!5m2!1sen!2slk"
+          width="550"
+          height="580"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer>
+      <div id="footerMenu" class="wrapper">
+        <nav>
+          <span class="footerHeadding">Main menu</span>
+          <ul class="footerLinks">
+            <li><a class="link" href="#">Home</a></li>
+            <li><a class="link" href="#">About us</a></li>
+            <li><a class="link" href="#">Contact Us</a></li>
+            <li><a class="link" href="#"></a>Our</li>
+          </ul>
+        </nav>
+        <nav>
+          <span class="footerHeadding">Main menu</span>
+          <ul class="footerLinks">
+            <li><a class="link" href="#">Home</a></li>
+            <li><a class="link" href="#">About us</a></li>
+            <li><a class="link" href="#">Contact Us</a></li>
+            <li><a class="link" href="#"></a>Our</li>
+          </ul>
+        </nav>
+        <nav>
+          <span class="footerHeadding">Main menu</span>
+          <ul class="footerLinks">
+            <li><a class="link" href="#">Home</a></li>
+            <li><a class="link" href="#">About us</a></li>
+            <li><a class="link" href="#">Contact Us</a></li>
+            <li><a class="link" href="#"></a>Our</li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <div id="copyright">
+      <div class="wrapper">
+        <p id="para3">ALL Right Reserved &copy; Web class 2023</p>
+      </div>
+    </div>
+  </body>
+</html>
